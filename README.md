@@ -3,7 +3,7 @@
 # Andrew Silveira
 # 5077086
 
-### Intro
+# Intro
 
 You will work with the Pong environment and implement Deep Q-Learning. In this environment, if
 we got the right and left paddle’s positions as the state, we would have continuous states that prevent
@@ -13,7 +13,7 @@ observation. The way you interact with the environment will be very similar to t
 environment used in class. Therefore, most of the code we discussed is directly applicable. You will
 be using the agent on the right.
 
-### Assignment 3 Report
+# Assignment 3 Report
 
 ## Final Network Architecture
 
@@ -40,10 +40,10 @@ This architecture is consistent with established DQN implementations and is appr
  - 8
  - 16
 
-# Metric Used
+### Metric Used
  - Episode reward (sum of shaped rewards per episode)
 
- # Observations
+### Observations
  - Batch size 8
  - Slightly smoother learning
  - Less variance between episodes
@@ -53,7 +53,7 @@ This architecture is consistent with established DQN implementations and is appr
  - Occasional higher peaks (e.g., near episode 18)
  - Slower reaction to new experience due to larger batch updates
 
-# Interpretation
+### Interpretation
 Smaller batch sizes update the network more frequently, which tends to:
 - increase responsiveness
 - reduce gradient smoothing
@@ -61,20 +61,20 @@ Smaller batch sizes update the network more frequently, which tends to:
 
 Larger batch sizes provide more stable gradients but can slow down adaptation, especially in the first 20–50 episodes.
 
-# Supporting Plots
+### Supporting Plots
 
 ![plot1](./images/plot1.png)
 
 ## Experiment 2 — Effect of Target Network Update Rate
 
-# Update Rates Tested
+### Update Rates Tested
 - 3 episodes
 - 10 episodes
 
-# Metric Used
+### Metric Used
 - Episode reward
 
-# Observations
+### Observations
 - Update rate = 3
 - Frequent target updates
 - More chaotic learning
@@ -86,7 +86,7 @@ Larger batch sizes provide more stable gradients but can slow down adaptation, e
 - Occasional meaningful improvements (e.g., episode 14 spike)
 - Better overall performance in early training
 
-# Interpretation
+### Interpretation
 Updating the target network too frequently destabilizes learning because the Q targets shift before the agent can learn from them.
 A slower update rate (10 episodes) provides:
 - more stable gradients
@@ -95,7 +95,7 @@ A slower update rate (10 episodes) provides:
 
 This matches the theoretical expectations of DQN.
 
-# Supporting Plot
+### Supporting Plot
 
 ![plot2](./images/plot2.png)
 
